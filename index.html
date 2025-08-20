@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PENJELASAN BAHASA PEMROGRAMAN</title>
+  <meta name="description" content="(Isi deskripsi di sini)" />  
+  <style>
+    :root {
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --radius:12px;
+    }
+    body.dark {
+      --bg:#0f1724;
+      --text:#e6eef8;
+      --muted:#9aa7bf;
+      --accent:#ff6b6b;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--text);
+      background:var(--bg);
+      transition:background 0.3s,color 0.3s;
+    }
+    .container{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .logo{width:48px;height:48px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff}
+    nav a{margin-left:12px;color:var(--muted);text-decoration:none}
+
+    .toggle-btn {
+      margin-left:16px;
+      padding:6px 12px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      background:var(--accent);
+      color:#fff;
+      font-weight:600;
+    }
+    
+    .img{
+      border-radius: 10px;
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .card{padding:16px;border-radius:var(--radius);border:1px dashed #e6e6e6;background:transparent;min-height:140px}
+    .article-preview{margin-top:20px;padding:16px;border:1px dashed #e6e6e6;border-radius:var(--radius);min-height:180px}
+    footer{margin-top:28px;color:var(--muted);font-size:0.9rem;text-align:center}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr};nav{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="logo"><img src="scorpion.jpg" class="img" height="55"></div>
+        <div>
+          <h1 style="margin:0;font-size:1.1rem">SCORPIO</h1>
+          <div style="color:var(--muted);font-size:0.85rem">(By Noel)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Kategori</a>
+        <a href="pages/tentang.html">Tentang</a>
+        <button class="toggle-btn" onclick="toggleDark()">🌙 Mode</button>
+      </nav>
+    </header>
+
+    <section id="hero" style="margin-top:18px;padding:3px;border-radius:var(--radius);border:1px dashed #e6e6e6">
+      <!-- Kosong — tambahkan gambar/teks di sini --> <h4>AUG 20,8,2025</h4>
+    </section>
+
+    <section class="grid" aria-label="Artikel">
+      <article class="card"><h3>3 Macam Bahasa Pemrograman</h3>
+      <h4>1.Python > </h4>
+      <h4>2.JavaScript ></h4>
+      <h4>3.PHP ></h4>
+      </article>
+      <article class="card"><h4>1.Python</h4>
+      Python merupakan bahasa pemrograman tingkat tinggi yang bisa digunakan untuk berbagai tujuan. Bahasa ini bisa digunakan untuk berbagai task, mulai dari analisis dan visualisasi data hingga pengembangan website, prototype, dan otomatisasi.</article>
+      <article class="card"><h4>2.JavaScript</h4>Selain HTML dan CSS, JavaScript menjadi bahasa pemrograman terbaik untuk dipelajari apabila Anda tertarik dengan front-end web. 97,8% dari semua website menggunakan JavaScript untuk skrip sisi kliennya, sehingga bahasa ini menjadi yang paling populer untuk tujuan pengembangan tersebut.</article>
+    </section>
+
+    <section id="preview" class="article-preview" aria-live="polite">
+      <h4>3.PHP</h4>PHP adalah salah satu bahasa back-end pertama yang penting untuk dipelajari menurut sejumlah web developer. Selain itu, PHP digunakan oleh 78,1% dari semua website karena merupakan bahasa utama untuk WordPress
+    </section>
+
+    <footer>
+      &copy; 2025 NOE WEB
+    </footer>
+  </div>
+
+  <script>
+    // Dark mode toggle
+    function toggleDark(){
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
